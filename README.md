@@ -8,3 +8,6 @@
 4. 各平衡树的校验逻辑，及性能测试。
 
 对应的视频教程：https://space.bilibili.com/1700469421 
+
+## Screenshots
+<img src="https://github.com/sicaril/BalanceTree/blob/main/result.png"/>
