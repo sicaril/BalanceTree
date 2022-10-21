@@ -10,4 +10,4 @@
 对应的视频教程：https://space.bilibili.com/1700469421 
 
 ## Screenshots
-<img width="312" height="205" src="https://github.com/sicaril/BalanceTree/blob/main/result.png"/>
+<img width="470" height="308" src="https://github.com/sicaril/BalanceTree/blob/main/result.png"/>
