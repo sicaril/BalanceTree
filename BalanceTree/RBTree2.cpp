@@ -171,6 +171,7 @@ bool RBTree2::_Insert(TreeNode ** ppNode, T& Data, bool * bSign)
 	}
 	else
 	{
+		*bSign = false;
 		return false;
 	}
 
