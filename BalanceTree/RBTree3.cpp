@@ -191,6 +191,7 @@ bool RBTree3::_Insert(TreeNode ** ppNode, T& Data, bool * bSign)
 	}
 	else
 	{
+		*bSign = false;
 		return false;
 	}
 
@@ -290,20 +291,20 @@ bool RBTree3::_Delete(TreeNode ** ppNode, T& Data, bool * bSign)
 				}
 				else
 				{
-					// ºÚºìºÚºÚ
+					// ÂºÃšÂºÃ¬ÂºÃšÂºÃš
 					*ppNode = SingleRotateWithRight(pNode);
 
 					(*ppNode)->u.m_color = NS_BLACK;
 					(*ppNode)->m_lchild->u.m_color = NS_RED;
 
-					// ¶þ´Îµ÷Õû
+					// Â¶Ã¾Â´ÃŽÂµÃ·Ã•Ã»
 					(*ppNode)->m_lchild = FixBlackTreeWithRight((*ppNode)->m_lchild);
 					*bSign = false;
 				}
 			}
 			else
 			{
-				// ºìºÚ XX
+				// ÂºÃ¬ÂºÃš XX
 				TreeNode * mid = pNode->m_rchild;
 				if ( IsLeftRed(mid) )
 				{
@@ -352,20 +353,20 @@ bool RBTree3::_Delete(TreeNode ** ppNode, T& Data, bool * bSign)
 				}
 				else
 				{
-					// ºÚºìºÚºÚ
+					// ÂºÃšÂºÃ¬ÂºÃšÂºÃš
 					*ppNode = SingleRotateWithLeft(pNode);
 
 					(*ppNode)->u.m_color = NS_BLACK;
 					(*ppNode)->m_rchild->u.m_color = NS_RED;
 
-					// ¶þ´Îµ÷Õû
+					// Â¶Ã¾Â´ÃŽÂµÃ·Ã•Ã»
 					(*ppNode)->m_rchild = FixBlackTreeWithLeft((*ppNode)->m_rchild);
 					*bSign = false;
 				}
 			}
 			else
 			{
-				// ºìºÚ XX
+				// ÂºÃ¬ÂºÃš XX
 				TreeNode * mid = pNode->m_lchild;
 				if ( IsRightRed(mid) )
 				{
@@ -419,20 +420,20 @@ bool RBTree3::_Delete(TreeNode ** ppNode, T& Data, bool * bSign)
 					}
 					else
 					{
-						// ºÚºìºÚºÚ
+						// ÂºÃšÂºÃ¬ÂºÃšÂºÃš
 						*ppNode = SingleRotateWithLeft(pNode);
 
 						(*ppNode)->u.m_color = NS_BLACK;
 						(*ppNode)->m_rchild->u.m_color = NS_RED;
 
-						// ¶þ´Îµ÷Õû
+						// Â¶Ã¾Â´ÃŽÂµÃ·Ã•Ã»
 						(*ppNode)->m_rchild = FixBlackTreeWithLeft((*ppNode)->m_rchild);
 						*bSign = false;
 					}
 				}
 				else
 				{
-					// ºìºÚ XX
+					// ÂºÃ¬ÂºÃš XX
 					TreeNode * mid = pNode->m_lchild;
 					if ( IsRightRed(mid) )
 					{
