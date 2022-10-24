@@ -378,7 +378,7 @@ bool RBTree::Delete(T& Data)
 				else
 					_parent->m_rchild = tmp;
 
-				//_cur = _min;
+				//_cur = tmp;
 			}
 		}
 
